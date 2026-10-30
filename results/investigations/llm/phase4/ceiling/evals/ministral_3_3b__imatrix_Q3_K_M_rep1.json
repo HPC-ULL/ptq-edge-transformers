@@ -1,0 +1,31 @@
+{
+ "model": "ministral_3_3b",
+ "label": "imatrix_Q3_K_M_rep1",
+ "format": "Q3_K_M",
+ "imatrix_rep": 1,
+ "threads": 8,
+ "gguf_sha256": "d8845005ceabb1ff499ff23c209f2a665118622113c6a8df8a87176c51e0b565",
+ "quantize_seconds": 290.9,
+ "quantize_cmd": [
+  "llama.cpp/build/bin/llama-quantize",
+  "--imatrix",
+  "artifacts/llm_imatrix/llm_ministral_3_3b_phase2_calibration_corpus_wikitext2_q4km__rep1.dat",
+  "artifacts/llm_base/ministral_3_3b_f16.gguf",
+  "results/investigations/llm/phase4/ceiling/tmp/ministral_3_3b__imatrix_Q3_K_M_rep1.gguf",
+  "Q3_K_M",
+  "8"
+ ],
+ "ppl": 9.4307,
+ "chunks": 588,
+ "ppl_seconds": 5365.6,
+ "ppl_cmd": [
+  "llama.cpp/build/bin/llama-perplexity",
+  "-m",
+  "results/investigations/llm/phase4/ceiling/tmp/ministral_3_3b__imatrix_Q3_K_M_rep1.gguf",
+  "-f",
+  "artifacts/llm_eval/wikitext2_test.txt",
+  "-t",
+  "8"
+ ],
+ "finished": "2026-10-09T19:45:36"
+}

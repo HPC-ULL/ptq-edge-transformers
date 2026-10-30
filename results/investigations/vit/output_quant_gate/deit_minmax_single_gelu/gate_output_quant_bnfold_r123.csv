@@ -1,0 +1,4 @@
+run_id,model_name,repeat_id,calibration_algorithm,top1_outq,top5_outq,top1_prev,top5_prev,onnx
+vit_deit_tiny_phase1_baseline_default_int8,deit_tiny,1,minmax,72.1,91.1,73.2,91.3,results/investigations/vit/output_quant_gate/deit_minmax_single_gelu/vit_deit_tiny_phase1_baseline_default_int8__rep1__outq_bnfold.onnx
+vit_deit_tiny_phase1_baseline_default_int8,deit_tiny,2,minmax,72.05,90.8,72.65,91.0,results/investigations/vit/output_quant_gate/deit_minmax_single_gelu/vit_deit_tiny_phase1_baseline_default_int8__rep2__outq_bnfold.onnx
+vit_deit_tiny_phase1_baseline_default_int8,deit_tiny,3,minmax,72.55,90.85,72.85,91.2,results/investigations/vit/output_quant_gate/deit_minmax_single_gelu/vit_deit_tiny_phase1_baseline_default_int8__rep3__outq_bnfold.onnx

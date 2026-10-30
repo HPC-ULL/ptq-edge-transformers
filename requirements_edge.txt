@@ -1,0 +1,17 @@
+# Minimal dependencies to run ONLY benchmarking_ondevice/ and
+# scripts/run_batch.py on an edge device (does not include quantization/ nor
+# evaluation_offline/, which are not shipped in the delivery packages).
+#
+# Only third-party package used by this subset of the code: PyYAML,
+# required by benchmarking_ondevice/runner_vit/devices.py,
+# benchmarking_ondevice/runner_llm/devices.py and configs/common.py (the
+# latter is a transitive dependency that already ships in the delivery
+# package -- see EXTRA_DEPENDENCY_FILES in verify_edge_bundle.py).
+#
+# Everything else used (os, sys, csv, time, json, re, tempfile, subprocess,
+# logging, threading, argparse, functools, importlib, pathlib, dataclasses,
+# typing) is part of the Python standard library and needs no installation.
+#
+# Version pinned to the one installed on the development cluster (reference);
+# any recent 6.0.x is compatible.
+pyyaml==6.0.2

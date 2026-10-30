@@ -1,0 +1,3 @@
+result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+vit_mobilevit_deploy_fp32__jetson_gpu_15w__rep1,vit_mobilevit_deploy_fp32,jetson_gpu_15w,1,cuda,15,30.0,3275,118.97065512200004,118.97387250500003,27.5277966372599,0.03901774500002375,30,True,2026-10-04T11:53:46+00:00
+vit_mobilevit_deploy_per_channel_asymmetric_int8__jetson_gpu_15w__rep1,vit_mobilevit_deploy_per_channel_asymmetric_int8,jetson_gpu_15w,1,cuda,15,30.0,6973,253.05104953299997,253.054121507,27.55570471993108,0.03828894399998717,30,True,2026-10-04T11:57:59+00:00

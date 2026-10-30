@@ -1,0 +1,3 @@
+model,repeat,top1,top5,ref_top1,ref_top5,per_image_top1_diff,status
+deit_tiny,2,58.45,81.35,58.45,81.35,0,OK
+deit_tiny,3,56.15,80.1,56.15,80.1,0,OK

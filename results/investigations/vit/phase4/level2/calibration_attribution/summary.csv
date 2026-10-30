@@ -1,0 +1,4 @@
+repeat,calib_seed,k0_top1,perc_top1,rec_perc,suf_top1,rec_suf,suf_over_perc,nec_top1,rec_nec,nec_over_perc,sufficient,necessary,reading
+1,42,2.95,68.9,0.8632198952879583,64.1,0.800392670157068,0.9272175890826382,4.0,0.013743455497382198,0.015921152388172852,True,True,sufficient and necessary: percentile's effect goes through these two layers
+2,43,1.55,68.5,0.8605398457583548,63.15,0.7917737789203085,0.9200896191187453,3.45,0.024421593830334192,0.02837938760268857,True,True,sufficient and necessary: percentile's effect goes through these two layers
+3,44,1.15,67.75,0.8516624040920716,60.85,0.7634271099744246,0.8963963963963965,3.85,0.03452685421994885,0.04054054054054054,True,True,sufficient and necessary: percentile's effect goes through these two layers

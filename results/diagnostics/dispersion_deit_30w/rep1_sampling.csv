@@ -1,0 +1,3 @@
+result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+vit_deit_tiny_deploy_fp32__jetson_cpu_30w__rep1,vit_deit_tiny_deploy_fp32,jetson_cpu_30w,1,cpu,30,30.0,939,34.36704634,34.37006197699998,27.32268553748515,0.03871804700008852,30,True,2026-09-29T16:31:18+00:00
+vit_deit_tiny_deploy_per_tensor_symmetric_int8__jetson_cpu_30w__rep1,vit_deit_tiny_deploy_per_tensor_symmetric_int8,jetson_cpu_30w,1,cpu,30,30.0,923,33.690596572000004,33.693745288999935,27.396368539436853,0.043292606000022715,30,True,2026-10-01T12:41:50+00:00

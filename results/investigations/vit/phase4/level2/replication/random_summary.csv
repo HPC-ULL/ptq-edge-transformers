@@ -1,0 +1,3 @@
+model,K,repeat,calib_seed,k0_top1,targeted_top1,targeted_recovery,random_s1_top1,random_s1_recovery,random_s2_top1,random_s2_recovery,random_s3_top1,random_s3_recovery,random_max_top1,targeted_beats_max,verdict
+efficientvit_b1,8,2,43,0.1,34.25,0.4210850801479654,0.15,0.0006165228113440195,13.8,0.1689272503082614,0.4,0.0036991368680641184,13.8,True,superiority holds
+efficientvit_b1,8,3,44,0.1,29.15,0.3581997533908754,0.1,0.0,9.75,0.1189889025893958,0.45,0.004315659679408138,9.75,True,superiority holds

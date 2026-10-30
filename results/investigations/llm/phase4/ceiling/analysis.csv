@@ -1,0 +1,7 @@
+model,format,repeat,ppl_none,ppl_imatrix,ppl_f16,G,G_ge_0_20,verdict
+ministral_3_3b,Q2_K,1,12.9385,11.6764,8.876,0.3106707692307693,True,compatible with a ceiling effect
+ministral_3_3b,Q2_K,2,12.9385,11.7264,8.876,0.2983630769230768,True,compatible with a ceiling effect
+ministral_3_3b,Q2_K,3,12.9385,11.6698,8.876,0.31229538461538436,True,compatible with a ceiling effect
+ministral_3_3b,Q3_K_M,1,9.6171,9.4307,8.876,0.25151801376332544,True,secondary: no verdict
+ministral_3_3b,Q3_K_M,2,9.6171,9.4117,8.876,0.277155579543922,True,secondary: no verdict
+ministral_3_3b,Q3_K_M,3,9.6171,9.4306,8.876,0.25165294832006513,True,secondary: no verdict

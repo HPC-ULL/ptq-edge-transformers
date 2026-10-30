@@ -1,0 +1,4 @@
+repeat,top1,top5,ref_top1,ref_top5,per_image_top1_diff,status
+1,68.9,89.05,68.9,89.05,0,OK
+2,68.5,88.85,68.5,88.85,0,OK
+3,67.75,87.8,67.75,87.8,0,OK

@@ -1,0 +1,865 @@
+{
+  "device_id": "jetson_cpu_50w",
+  "threads": 4,
+  "uptime_s": 6814.1,
+  "rounds": 3,
+  "repeats": 200,
+  "profile_repeats": 20,
+  "artifacts": {
+    "deit_fp32": "artifacts/vit_deployment/vit_deit_tiny_deploy_fp32__rep1.onnx",
+    "deit_int8": "artifacts/vit_deployment/vit_deit_tiny_deploy_per_tensor_symmetric_int8__rep1.onnx",
+    "mvit_fp32": "artifacts/vit_deployment/vit_mobilevit_deploy_fp32__rep1.onnx",
+    "mvit_int8": "artifacts/vit_deployment/vit_mobilevit_deploy_per_channel_asymmetric_int8__rep1.onnx"
+  },
+  "latency": {
+    "deit_fp32": {
+      "samples_ms": [
+        46.5933,
+        86.5429,
+        74.5813
+      ],
+      "median_ms": 74.5813,
+      "min_ms": 46.5933,
+      "stdev_ms": 20.503571065873704,
+      "ratio_vs_reference": 1.0
+    },
+    "deit_int8": {
+      "samples_ms": [
+        59.0635,
+        68.2663,
+        61.7374
+      ],
+      "median_ms": 61.7374,
+      "min_ms": 59.0635,
+      "stdev_ms": 4.734057531336096,
+      "ratio_vs_reference": 0.8277865899360832
+    },
+    "mvit_fp32": {
+      "samples_ms": [
+        132.725,
+        164.359,
+        114.095
+      ],
+      "median_ms": 132.725,
+      "min_ms": 114.095,
+      "stdev_ms": 25.410813157656595,
+      "ratio_vs_reference": 1.779601589138296
+    },
+    "mvit_int8": {
+      "samples_ms": [
+        117.527,
+        129.983,
+        113.977
+      ],
+      "median_ms": 117.527,
+      "min_ms": 113.977,
+      "stdev_ms": 8.405816161047857,
+      "ratio_vs_reference": 1.575823966597525
+    }
+  },
+  "profile": {
+    "deit_fp32": {
+      "profile_file": null,
+      "per_op": {
+        "Conv": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 35964.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Reshape": {
+          "unique_nodes": 97,
+          "calls": 2037,
+          "dur_us": 25640.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Transpose": {
+          "unique_nodes": 49,
+          "calls": 1029,
+          "dur_us": 44540.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Concat": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 903.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Add": {
+          "unique_nodes": 24,
+          "calls": 504,
+          "dur_us": 21013.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "LayerNormalization": {
+          "unique_nodes": 24,
+          "calls": 504,
+          "dur_us": 51422.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Gemm": {
+          "unique_nodes": 49,
+          "calls": 1029,
+          "dur_us": 986133.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Split": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 25884.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Squeeze": {
+          "unique_nodes": 36,
+          "calls": 756,
+          "dur_us": 9063.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "FusedMatMul": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 80820.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Softmax": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 51110.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "MatMul": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 79008.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Gelu": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 142810.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "SkipLayerNormalization": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 2065.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Gather": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 417.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        }
+      },
+      "rollup": {
+        "integer": {
+          "nodes": 0,
+          "dur_us": 0.0,
+          "time_share": 0.0
+        },
+        "qdq": {
+          "nodes": 0,
+          "dur_us": 0.0,
+          "time_share": 0.0
+        },
+        "float_compute": {
+          "nodes": 74,
+          "dur_us": 1181925.0,
+          "time_share": 0.7592054686817507
+        },
+        "other": {
+          "nodes": 269,
+          "dur_us": 374867.0,
+          "time_share": 0.24079453131824932
+        }
+      },
+      "provider_time_share": {
+        "CPUExecutionProvider": 1.0
+      },
+      "verdict": "FLOAT",
+      "reading": "plain float graph: no integer kernels and no Quantize/Dequantize nodes"
+    },
+    "deit_int8": {
+      "profile_file": null,
+      "per_op": {
+        "QuantizeLinear": {
+          "unique_nodes": 50,
+          "calls": 1050,
+          "dur_us": 83546.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "qdq"
+        },
+        "Transpose": {
+          "unique_nodes": 51,
+          "calls": 1071,
+          "dur_us": 46052.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "QLinearConv": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 7567.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "integer"
+        },
+        "Reshape": {
+          "unique_nodes": 121,
+          "calls": 2541,
+          "dur_us": 31445.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "DequantizeLinear": {
+          "unique_nodes": 62,
+          "calls": 1302,
+          "dur_us": 82618.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "qdq"
+        },
+        "Concat": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 826.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Add": {
+          "unique_nodes": 36,
+          "calls": 756,
+          "dur_us": 37474.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "LayerNormalization": {
+          "unique_nodes": 24,
+          "calls": 504,
+          "dur_us": 55206.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "QGemm": {
+          "unique_nodes": 49,
+          "calls": 1029,
+          "dur_us": 393663.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "integer"
+        },
+        "Split": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 24679.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Squeeze": {
+          "unique_nodes": 36,
+          "calls": 756,
+          "dur_us": 9010.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "FusedMatMul": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 77481.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Softmax": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 57215.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "MatMul": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 75763.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Div": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 27113.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Erf": {
+          "unique_nodes": 12,
+          "calls": 252,
+          "dur_us": 269915.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Mul": {
+          "unique_nodes": 24,
+          "calls": 504,
+          "dur_us": 38541.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "SkipLayerNormalization": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 2235.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Gather": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 423.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        }
+      },
+      "rollup": {
+        "integer": {
+          "nodes": 50,
+          "dur_us": 401230.0,
+          "time_share": 0.3037844533348678
+        },
+        "qdq": {
+          "nodes": 112,
+          "dur_us": 166164.0,
+          "time_share": 0.12580823942360983
+        },
+        "float_compute": {
+          "nodes": 24,
+          "dur_us": 153244.0,
+          "time_share": 0.11602608171584497
+        },
+        "other": {
+          "nodes": 343,
+          "dur_us": 600134.0,
+          "time_share": 0.4543812255256774
+        }
+      },
+      "provider_time_share": {
+        "CPUExecutionProvider": 1.0
+      },
+      "verdict": "MIXED",
+      "reading": "integer kernels carry 72% of the Conv/MatMul compute time; the rest still runs as float compute (see the per-op table for which ops)"
+    },
+    "mvit_fp32": {
+      "profile_file": null,
+      "per_op": {
+        "Conv": {
+          "unique_nodes": 33,
+          "calls": 693,
+          "dur_us": 907734.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "QuickGelu": {
+          "unique_nodes": 34,
+          "calls": 714,
+          "dur_us": 338672.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "FusedConv": {
+          "unique_nodes": 2,
+          "calls": 42,
+          "dur_us": 123011.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Reshape": {
+          "unique_nodes": 90,
+          "calls": 1890,
+          "dur_us": 24840.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Transpose": {
+          "unique_nodes": 48,
+          "calls": 1008,
+          "dur_us": 93792.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "LayerNormalization": {
+          "unique_nodes": 18,
+          "calls": 378,
+          "dur_us": 44110.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Gemm": {
+          "unique_nodes": 37,
+          "calls": 777,
+          "dur_us": 491969.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Split": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 22683.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Squeeze": {
+          "unique_nodes": 27,
+          "calls": 567,
+          "dur_us": 7194.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "FusedMatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 62951.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Softmax": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 53120.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "MatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 65974.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Add": {
+          "unique_nodes": 15,
+          "calls": 315,
+          "dur_us": 15587.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "SkipLayerNormalization": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 7002.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Concat": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 4354.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "GlobalAveragePool": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 936.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Flatten": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 217.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        }
+      },
+      "rollup": {
+        "integer": {
+          "nodes": 0,
+          "dur_us": 0.0,
+          "time_share": 0.0
+        },
+        "qdq": {
+          "nodes": 0,
+          "dur_us": 0.0,
+          "time_share": 0.0
+        },
+        "float_compute": {
+          "nodes": 90,
+          "dur_us": 1651639.0,
+          "time_share": 0.7294754843548075
+        },
+        "other": {
+          "nodes": 258,
+          "dur_us": 612507.0,
+          "time_share": 0.2705245156451925
+        }
+      },
+      "provider_time_share": {
+        "CPUExecutionProvider": 1.0
+      },
+      "verdict": "FLOAT",
+      "reading": "plain float graph: no integer kernels and no Quantize/Dequantize nodes"
+    },
+    "mvit_int8": {
+      "profile_file": null,
+      "per_op": {
+        "QuantizeLinear": {
+          "unique_nodes": 72,
+          "calls": 1512,
+          "dur_us": 235163.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "qdq"
+        },
+        "Transpose": {
+          "unique_nodes": 118,
+          "calls": 2478,
+          "dur_us": 335996.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "QLinearConv": {
+          "unique_nodes": 35,
+          "calls": 735,
+          "dur_us": 406768.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "integer"
+        },
+        "DequantizeLinear": {
+          "unique_nodes": 87,
+          "calls": 1827,
+          "dur_us": 236892.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "qdq"
+        },
+        "BatchNormalization": {
+          "unique_nodes": 32,
+          "calls": 672,
+          "dur_us": 154197.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "QuickGelu": {
+          "unique_nodes": 25,
+          "calls": 525,
+          "dur_us": 476964.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Add": {
+          "unique_nodes": 20,
+          "calls": 420,
+          "dur_us": 25972.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Reshape": {
+          "unique_nodes": 108,
+          "calls": 2268,
+          "dur_us": 29709.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "ReduceMean": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 3287.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Sub": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 3314.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "SimplifiedLayerNormalization": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 10550.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "QGemm": {
+          "unique_nodes": 37,
+          "calls": 777,
+          "dur_us": 315863.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "integer"
+        },
+        "Split": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 24321.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Squeeze": {
+          "unique_nodes": 27,
+          "calls": 567,
+          "dur_us": 7454.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "FusedMatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 76176.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Softmax": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 87215.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "MatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 79618.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "LayerNormalization": {
+          "unique_nodes": 15,
+          "calls": 315,
+          "dur_us": 45765.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Sigmoid": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 37810.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Mul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 13813.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "SkipLayerNormalization": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 9355.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Concat": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 4581.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "GlobalAveragePool": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 947.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Flatten": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 221.0,
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "category": "other"
+        }
+      },
+      "rollup": {
+        "integer": {
+          "nodes": 72,
+          "dur_us": 722631.0,
+          "time_share": 0.27560812539975005
+        },
+        "qdq": {
+          "nodes": 159,
+          "dur_us": 472055.0,
+          "time_share": 0.18003959646843135
+        },
+        "float_compute": {
+          "nodes": 18,
+          "dur_us": 155794.0,
+          "time_share": 0.05941911195136751
+        },
+        "other": {
+          "nodes": 398,
+          "dur_us": 1271471.0,
+          "time_share": 0.4849331661804511
+        }
+      },
+      "provider_time_share": {
+        "CPUExecutionProvider": 0.9999999999999999
+      },
+      "verdict": "MIXED",
+      "reading": "integer kernels carry 82% of the Conv/MatMul compute time; the rest still runs as float compute (see the per-op table for which ops)"
+    }
+  }
+}

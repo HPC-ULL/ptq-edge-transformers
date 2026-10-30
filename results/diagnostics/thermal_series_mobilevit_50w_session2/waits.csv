@@ -1,0 +1,3 @@
+name,target_c,t_start,t_end,waited_s,reached
+before_series,46.781,49.281,46.718,300.4310183289999,True
+before_control,46.781,49.906,46.718,425.6187742460006,True

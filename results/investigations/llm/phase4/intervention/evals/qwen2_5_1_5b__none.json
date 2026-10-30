@@ -1,0 +1,29 @@
+{
+ "model": "qwen2_5_1_5b",
+ "label": "none",
+ "imatrix_rep": null,
+ "n_include": 0,
+ "threads": 8,
+ "gguf_sha256": "eeece8001e31797805aa3c4302720ddee5419bdce584d6a707f4986b1169b1e8",
+ "quantize_seconds": 68.8,
+ "quantize_cmd": [
+  "llama.cpp/build/bin/llama-quantize",
+  "artifacts/llm_base/qwen2_5_1_5b_f16.gguf",
+  "results/investigations/llm/phase4/intervention/tmp/qwen2_5_1_5b__none.gguf",
+  "Q3_K_M",
+  "8"
+ ],
+ "ppl": 12.4471,
+ "chunks": 583,
+ "ppl_seconds": 2646.3,
+ "ppl_cmd": [
+  "llama.cpp/build/bin/llama-perplexity",
+  "-m",
+  "results/investigations/llm/phase4/intervention/tmp/qwen2_5_1_5b__none.gguf",
+  "-f",
+  "artifacts/llm_eval/wikitext2_test.txt",
+  "-t",
+  "8"
+ ],
+ "finished": "2026-10-07T19:43:53"
+}

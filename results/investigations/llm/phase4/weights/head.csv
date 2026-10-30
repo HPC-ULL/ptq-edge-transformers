@@ -1,0 +1,4 @@
+model,name,omega,kurtosis_excess
+tinyllama_1_1b,output.weight,4.191303974617803,1.6743687089861048
+qwen2_5_1_5b,token_embd.weight,2.5468747962500164,0.32052313476387617
+ministral_3_3b,token_embd.weight,5.324998636800348,0.42363755346743925

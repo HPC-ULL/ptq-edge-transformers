@@ -1,0 +1,3 @@
+device_id,run_id,chosen_rep,median_power_rep,chosen_is_median_power
+jetson_cpu_15w,vit_deit_tiny_deploy_fp32,3,2,False
+jetson_cpu_15w,vit_deit_tiny_deploy_per_tensor_symmetric_int8,3,2,False

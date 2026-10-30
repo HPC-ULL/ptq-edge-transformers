@@ -1,0 +1,5 @@
+result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+vit_deit_tiny_deploy_fp32__jetson_cpu_50w__rep1,vit_deit_tiny_deploy_fp32,jetson_cpu_50w,1,cpu,50,30.0,1058,38.72271601299872,38.72570183299831,27.32246363206659,0.03856239100059611,30,True,2026-10-01T19:11:06+00:00
+vit_deit_tiny_deploy_per_tensor_symmetric_int8__jetson_cpu_50w__rep1,vit_deit_tiny_deploy_per_tensor_symmetric_int8,jetson_cpu_50w,1,cpu,50,30.0,891,32.60794522700235,32.61102730100174,27.324628822737683,0.03708190700126579,30,True,2026-10-01T19:11:39+00:00
+vit_deit_tiny_deploy_per_channel_symmetric_int8__jetson_cpu_50w__rep1,vit_deit_tiny_deploy_per_channel_symmetric_int8,jetson_cpu_50w,1,cpu,50,30.0,937,34.266380734999984,34.26934805900237,27.344586148339264,0.03838213299968629,30,True,2026-10-01T19:12:13+00:00
+vit_deit_tiny_deploy_per_tensor_asymmetric_int8__jetson_cpu_50w__rep1,vit_deit_tiny_deploy_per_tensor_asymmetric_int8,jetson_cpu_50w,1,cpu,50,30.0,883,32.29072697800075,32.29365292700095,27.34531187859525,0.03826709100030712,30,True,2026-10-01T19:12:46+00:00

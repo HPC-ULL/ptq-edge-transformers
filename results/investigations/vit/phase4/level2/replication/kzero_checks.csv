@@ -1,0 +1,5 @@
+model,repeat,top1,top5,ref_top1,ref_top5,per_image_top1_diff,status
+mobilevit,2,1.55,4.7,1.55,4.7,0,OK
+mobilevit,3,1.15,3.75,1.15,3.75,0,OK
+efficientvit_b1,2,0.1,0.55,0.1,0.55,0,OK
+efficientvit_b1,3,0.1,0.7,0.1,0.7,0,OK

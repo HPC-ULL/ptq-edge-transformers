@@ -1,0 +1,2 @@
+result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+vit_deit_tiny_deploy_per_tensor_asymmetric_int8__jetson_cpu_15w__rep1,vit_deit_tiny_deploy_per_tensor_asymmetric_int8,jetson_cpu_15w,1,cpu,15,30.0,1344,50.312571099000024,50.316432685999985,26.713005728834883,0.04269886800000222,30,True,2026-10-01T20:14:08+00:00

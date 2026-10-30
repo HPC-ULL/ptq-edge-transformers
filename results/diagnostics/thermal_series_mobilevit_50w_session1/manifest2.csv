@@ -1,0 +1,3 @@
+run_id,repeat_id,artifact_path
+vit_mobilevit_deploy_fp32,1,artifacts/vit_deployment/vit_mobilevit_deploy_fp32__rep1.onnx
+vit_mobilevit_deploy_per_channel_asymmetric_int8,1,artifacts/vit_deployment/vit_mobilevit_deploy_per_channel_asymmetric_int8__rep1.onnx

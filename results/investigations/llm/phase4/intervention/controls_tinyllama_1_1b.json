@@ -1,0 +1,28 @@
+{
+ "model": "tinyllama_1_1b",
+ "threads": 8,
+ "control1_none": {
+  "ppl": 9.2084,
+  "ok": true
+ },
+ "control1_full_rep1": {
+  "ppl": 8.9554,
+  "ok": true
+ },
+ "control4": {
+  "ppl_first": 8.9554,
+  "ppl_second": 8.9554,
+  "abs_diff": 0.0,
+  "ok": true,
+  "seconds": 1990.0
+ },
+ "control2": {
+  "n_explicit": 154,
+  "sha256_full": "257496070ff948bc57360e5d7974a575f6c9342a8cef4801f29dc750d2bda18e",
+  "sha256_explicit": "257496070ff948bc57360e5d7974a575f6c9342a8cef4801f29dc750d2bda18e",
+  "tensor_problems": [],
+  "ok": true,
+  "quantize_seconds": 56.6
+ },
+ "passed": true
+}

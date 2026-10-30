@@ -1,0 +1,64 @@
+# EXAMPLE of the device catalog -- NEVER read. The code only reads
+# configs/devices.yaml, which belongs to each machine (its entries are filled in
+# by hand there and do not travel in any zip, so they are not overwritten). This
+# file does travel in the zips: it serves as a template to add a new device to
+# YOUR devices.yaml. Full schema: technical_architecture.md Section 10.5.
+#
+# Fields:
+#   device_id          required. Unique identifier; it is the `device` column
+#                      of the results and the runners' --device-id.
+#   display_name       required. Human-readable text.
+#   architecture       required. ARM, x86_64, ...
+#   backend            required. cpu | cuda.
+#   power_mode_w       power mode (W) if the device has several; otherwise
+#                      null. On the Jetson it is checked against nvpmodel.
+#   ram_gb, cpu_cores  cpu_cores = PHYSICAL cores (never hyperthreads): it is
+#                      the runners' number of threads.
+#   n_gpu_layers       only backend: cuda entries (llama-bench's -ngl); a
+#                      cuda entry without it fails, no value is assumed.
+#   power_measurement  actual energy measurement method of the device, or null.
+#   min_uptime_s       optional; if missing, 0 = no wait. Seconds since boot
+#                      that scripts/run_batch.py waits before measuring.
+#                      Only the Jetson AGX Orin needs it (its decode speed
+#                      rises ~6-7 min after boot): 600.
+#   added_by           who added the entry.
+#   notes              optional, free text (e.g. an ONNX Runtime version
+#                      different from the reference one).
+
+# Jetson AGX Orin, CPU (one entry per power mode: 15w, 30w, 50w)
+- device_id: jetson_cpu_50w
+  display_name: "NVIDIA Jetson AGX Orin (CPU, 50W)"
+  architecture: ARM
+  backend: cpu
+  power_mode_w: 50
+  ram_gb: 29
+  cpu_cores: 12
+  power_measurement: jetson_ina3221
+  min_uptime_s: 600
+  added_by: nicolas
+
+# Jetson AGX Orin, GPU: same, plus n_gpu_layers
+- device_id: jetson_gpu_50w
+  display_name: "NVIDIA Jetson AGX Orin (GPU, 50W)"
+  architecture: ARM
+  backend: cuda
+  power_mode_w: 50
+  ram_gb: 29
+  cpu_cores: 12
+  n_gpu_layers: 99
+  power_measurement: jetson_ina3221
+  min_uptime_s: 600
+  added_by: nicolas
+
+# CPU device without a wait after boot (no min_uptime_s): the example
+# of the original schema (technical_architecture.md Section 10.5)
+- device_id: rpi_cm4
+  display_name: "Raspberry Pi CM4"
+  architecture: ARM
+  backend: cpu
+  power_mode_w: null
+  ram_gb: 8
+  cpu_cores: 4
+  power_measurement: accelpowercape
+  added_by: daniel
+  notes: ""  # optional, free text

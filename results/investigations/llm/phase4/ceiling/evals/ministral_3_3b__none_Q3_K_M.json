@@ -1,0 +1,29 @@
+{
+ "model": "ministral_3_3b",
+ "label": "none_Q3_K_M",
+ "format": "Q3_K_M",
+ "imatrix_rep": null,
+ "threads": 8,
+ "gguf_sha256": "e1cad700d3873e8c7696f820b971bb51aed236c920c8a85216415d57c1421746",
+ "quantize_seconds": 165.9,
+ "quantize_cmd": [
+  "llama.cpp/build/bin/llama-quantize",
+  "artifacts/llm_base/ministral_3_3b_f16.gguf",
+  "results/investigations/llm/phase4/ceiling/tmp/ministral_3_3b__none_Q3_K_M.gguf",
+  "Q3_K_M",
+  "8"
+ ],
+ "ppl": 9.6171,
+ "chunks": 588,
+ "ppl_seconds": 5320.1,
+ "ppl_cmd": [
+  "llama.cpp/build/bin/llama-perplexity",
+  "-m",
+  "results/investigations/llm/phase4/ceiling/tmp/ministral_3_3b__none_Q3_K_M.gguf",
+  "-f",
+  "artifacts/llm_eval/wikitext2_test.txt",
+  "-t",
+  "8"
+ ],
+ "finished": "2026-10-09T18:11:14"
+}

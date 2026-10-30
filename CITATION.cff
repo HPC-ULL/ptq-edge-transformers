@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper below."
+title: "Code and results for: From Calibration to Deployment: Accuracy and Energy of Post-Training Quantized Transformers on Heterogeneous Edge Devices"
+type: software
+license: MIT
+authors:
+  - given-names: Nicolás
+    family-names: Hernández
+    email: nhernang@ull.es
+    affiliation: "Department of Computer Engineering and Systems, University of La Laguna"
+  - given-names: Daniel
+    family-names: Suárez
+    affiliation: "Department of Computer Engineering and Systems, University of La Laguna"
+  - given-names: Pedro
+    family-names: Toledo
+    affiliation: "Department of Computer Engineering and Systems, University of La Laguna"
+  - given-names: Vicente
+    family-names: Blanco
+    affiliation: "Department of Computer Engineering and Systems, University of La Laguna"
+  - given-names: Francisco
+    family-names: Almeida
+    affiliation: "Department of Computer Engineering and Systems, University of La Laguna"
+repository-code: "https://github.com/HPC-ULL/ptq-edge-transformers"
+preferred-citation:
+  type: article
+  title: "From Calibration to Deployment: Accuracy and Energy of Post-Training Quantized Transformers on Heterogeneous Edge Devices"
+  authors:
+    - given-names: Nicolás
+      family-names: Hernández
+    - given-names: Daniel
+      family-names: Suárez
+    - given-names: Pedro
+      family-names: Toledo
+    - given-names: Vicente
+      family-names: Blanco
+    - given-names: Francisco
+      family-names: Almeida
+  journal: "IEEE Internet of Things Journal"
+  status: submitted
+  year: 2026

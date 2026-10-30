@@ -1,0 +1,4 @@
+model,top1,top5,ref_top1,ref_top5,per_image_top1_diff,status
+deit_tiny,58.8,81.55,58.8,81.55,0,OK
+mobilevit,2.95,7.0,2.95,7.0,0,OK
+efficientvit_b1,0.2,0.9,0.2,0.9,0,OK

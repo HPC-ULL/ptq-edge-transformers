@@ -1,0 +1,11 @@
+{
+  "probe_sha256": "254bb2574688372b76afbc8d40faad253581d624165c1a6c73b1a3c33305d904",
+  "source_zip": "edge_delivery/edge_bundle_code_vit.zip",
+  "modified": false,
+  "rounds": 3,
+  "repeats": 10,
+  "profile_repeats": 3,
+  "threads": 4,
+  "int8_variant": "per_channel_symmetric_int8",
+  "purpose": "standalone kernel diagnostic; not a campaign performance/energy result"
+}

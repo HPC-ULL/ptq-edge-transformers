@@ -1,0 +1,2 @@
+result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+llm_qwen2_5_1_5b_phase1_baseline_default_q4km__jetson_cpu_50w_sweep,llm_qwen2_5_1_5b_phase1_baseline_default_q4km,jetson_cpu_50w_sweep,,cpu,50,30.0,1235,45.152929677999964,45.155817537000075,27.351492113738388,0.04788244099927397,30,True,2026-10-04T11:23:03+00:00

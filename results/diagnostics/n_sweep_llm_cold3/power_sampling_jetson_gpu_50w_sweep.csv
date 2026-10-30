@@ -1,0 +1,2 @@
+result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+llm_qwen2_5_1_5b_phase1_baseline_default_q4km__jetson_gpu_50w_sweep,llm_qwen2_5_1_5b_phase1_baseline_default_q4km,jetson_gpu_50w_sweep,,cuda,50,30.0,723,26.133898111000235,26.136715122999703,27.665218442696695,0.0383621029995993,30,True,2026-10-04T11:24:55+00:00

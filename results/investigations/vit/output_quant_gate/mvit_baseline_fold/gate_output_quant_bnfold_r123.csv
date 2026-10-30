@@ -1,0 +1,4 @@
+run_id,model_name,repeat_id,calibration_algorithm,top1_outq,top5_outq,top1_prev,top5_prev,onnx
+vit_mobilevit_phase1_baseline_default_int8,mobilevit,1,minmax,0.6,1.75,2.95,7.0,gate_mvit_base_fold/vit_mobilevit_phase1_baseline_default_int8__rep1__outq_bnfold.onnx
+vit_mobilevit_phase1_baseline_default_int8,mobilevit,2,minmax,0.45,1.4,1.55,4.7,gate_mvit_base_fold/vit_mobilevit_phase1_baseline_default_int8__rep2__outq_bnfold.onnx
+vit_mobilevit_phase1_baseline_default_int8,mobilevit,3,minmax,0.2,1.1,1.15,3.75,gate_mvit_base_fold/vit_mobilevit_phase1_baseline_default_int8__rep3__outq_bnfold.onnx

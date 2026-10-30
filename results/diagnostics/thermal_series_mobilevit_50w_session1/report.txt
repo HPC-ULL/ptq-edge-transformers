@@ -1,0 +1,53 @@
+backend of the measured rows: cpu
+tegrastats: 6 samples, 2026-10-02T12:24:44+00:00 -> 2026-10-02T12:24:49+00:00 UTC; 0 of 22 row windows have >= 10 samples
+  WARNING: NO THERMAL DATA for the rows without samples -- temperature and frequency cannot be compared and the 'accompanied' test is not evaluable (tegrastats stopped or does not cover the session)
+T0 45.687 C; cold target T0 + 1 C
+
+per invocation and row (window = the measured run):
+  invocationrow                                                        lat ms   net W   raw W  idle W    T C   f MHz    n
+  batch10   deit_tiny_deploy_fp32                                       41.23   3.392   5.584   2.192    n/a     n/a    0
+  batch10   deit_tiny_deploy_per_tensor_symmetric_int8                  35.12   2.450   4.643   2.193    n/a     n/a    0
+  batch10   deit_tiny_deploy_per_channel_symmetric_int8                 34.73   2.474   4.666   2.192    n/a     n/a    0
+  batch10   deit_tiny_deploy_per_tensor_asymmetric_int8                 36.33   2.375   4.569   2.194    n/a     n/a    0
+  batch10   mobiledeploy_fp32                                           73.69   3.398   5.591   2.194    n/a     n/a    0
+  batch10   mobiledeploy_per_channel_asymmetric_int8                    80.05   2.793   4.986   2.193    n/a     n/a    0
+  batch10   mobiledeploy_per_tensor_asymmetric_int8                     80.06   2.851   5.045   2.194    n/a     n/a    0
+  batch10   mobiledeploy_per_channel_symmetric_int8                     82.21   2.676   4.870   2.194    n/a     n/a    0
+  batch10   deit_tiny_phase2_calibration_algorithm_mse_int8             50.56   3.261   5.455   2.194    n/a     n/a    0
+  batch10   mobilephase2_calibration_algorithm_percentile_int8          96.13   3.112   5.306   2.194    n/a     n/a    0
+  series1   mobiledeploy_fp32                                           73.41   3.559   5.593   2.034    n/a     n/a    0
+  series1   mobiledeploy_per_channel_asymmetric_int8                    80.45   2.909   4.943   2.034    n/a     n/a    0
+  series2   mobiledeploy_fp32                                           74.43   3.482   5.596   2.114    n/a     n/a    0
+  series2   mobiledeploy_per_channel_asymmetric_int8                    80.18   2.861   4.975   2.114    n/a     n/a    0
+  series3   mobiledeploy_fp32                                           75.19   3.441   5.595   2.154    n/a     n/a    0
+  series3   mobiledeploy_per_channel_asymmetric_int8                    78.59   2.927   5.081   2.154    n/a     n/a    0
+  series4   mobiledeploy_fp32                                           73.72   3.437   5.591   2.154    n/a     n/a    0
+  series4   mobiledeploy_per_channel_asymmetric_int8                    79.09   2.868   5.022   2.154    n/a     n/a    0
+  series5   mobiledeploy_fp32                                           74.44   3.408   5.562   2.154    n/a     n/a    0
+  series5   mobiledeploy_per_channel_asymmetric_int8                    79.97   2.844   4.998   2.154    n/a     n/a    0
+  control   mobiledeploy_fp32                                           73.37   3.609   5.643   2.034    n/a     n/a    0
+  control   mobiledeploy_per_channel_asymmetric_int8                    85.96   2.697   4.731   2.034    n/a     n/a    0
+  wait before_series: 48.968 -> 46.656 C in 305 s, reached
+  wait before_control: 49.625 -> 46.687 C in 441 s, reached
+
+the 10-row batch vs the 2-row invocations (MobileViT-S rows):
+  NOTE: the DeiT-Tiny INT8 artifacts in batch10 are the REGENERATED ones (single-node GELU), not the loose-GELU graph of the original batch.
+  fp32                        latency ms  batch10 73.694   2-row median 74.077 [73.368-75.186]   batch10 vs median -0.5 %
+  fp32                        net W       batch10 3.398   2-row median 3.461 [3.408-3.609]   batch10 vs median -1.8 %
+  fp32                        idle W      batch10 2.194   2-row median 2.134 [2.034-2.154]   batch10 vs median +2.8 %
+  per_channel_asymmetric_int8 latency ms  batch10 80.055   2-row median 80.074 [78.594-85.958]   batch10 vs median -0.0 %
+  per_channel_asymmetric_int8 net W       batch10 2.793   2-row median 2.865 [2.697-2.927]   batch10 vs median -2.5 %
+  per_channel_asymmetric_int8 idle W      batch10 2.193   2-row median 2.134 [2.034-2.154]   batch10 vs median +2.8 %
+  criterion: batch10 vs invocation 1 -- >= 3 % faster: composition identified; within +-2 %: ruled out; otherwise inconclusive
+  INT8 core       batch10 80.05 ms vs invocation 1 80.45 ms: +0.5 % faster -> COMPOSICION DEL LOTE DESCARTADA
+  FP32 (control)  batch10 73.69 ms vs invocation 1 73.41 ms: -0.4 % faster -> COMPOSICION DEL LOTE DESCARTADA
+
+series (INT8 | FP32 control):
+  latency ms  INT8 80.45 / 80.18 / 78.59 / 79.09 / 79.97   FP32 73.41 / 74.43 / 75.19 / 73.72 / 74.44
+  INT8 rise 1->5 -0.6 %, range 2.4 %; FP32 rise +1.4 %
+  INT8 row, inv 1 -> 5: temperature n/a, mean core frequency n/a
+  cold control INT8 85.96 ms: +6.8 % vs invocation 1
+  linear trend of the INT8 latency: -0.21 ms/invocation
+  persistent drift (the control stays >= 2 % above invocation 1): si
+
+CATEGORY: NO CONCLUYENTE (rango entre 2 y 3 %, o bajada)

@@ -1,0 +1,13 @@
+result_id,run_id,model_family,model_name,phase,factor_varied,factor_level,calibration_algorithm,granularity,symmetry,calibration_corpus,quant_scheme,calib_set_size,bitwidth,device,repeat_id,accuracy_metric_name,accuracy_value,latency_ms,throughput,throughput_prefill_tps,throughput_decode_tps,energy_per_inference,perf_per_watt,model_size_mb
+vit_deit_tiny_reference_fp32__offline__top1_accuracy,vit_deit_tiny_reference_fp32,vit,deit_tiny,reference,reference,fp32,,,,none,,,fp32,offline,,top1_accuracy,73.5,,,,,,,
+vit_deit_tiny_reference_fp32__offline__top5_accuracy,vit_deit_tiny_reference_fp32,vit,deit_tiny,reference,reference,fp32,,,,none,,,fp32,offline,,top5_accuracy,91.25,,,,,,,
+vit_deit_tiny_reference_fp32_full50000__offline__top1_accuracy,vit_deit_tiny_reference_fp32_full50000,vit,deit_tiny,reference,reference,fp32_full50000,,,,none,,,fp32,offline,,top1_accuracy,72.16,,,,,,,
+vit_deit_tiny_reference_fp32_full50000__offline__top5_accuracy,vit_deit_tiny_reference_fp32_full50000,vit,deit_tiny,reference,reference,fp32_full50000,,,,none,,,fp32,offline,,top5_accuracy,91.108,,,,,,,
+vit_mobilevit_reference_fp32__offline__top1_accuracy,vit_mobilevit_reference_fp32,vit,mobilevit,reference,reference,fp32,,,,none,,,fp32,offline,,top1_accuracy,79.35,,,,,,,
+vit_mobilevit_reference_fp32__offline__top5_accuracy,vit_mobilevit_reference_fp32,vit,mobilevit,reference,reference,fp32,,,,none,,,fp32,offline,,top5_accuracy,92.75,,,,,,,
+vit_mobilevit_reference_fp32_full50000__offline__top1_accuracy,vit_mobilevit_reference_fp32_full50000,vit,mobilevit,reference,reference,fp32_full50000,,,,none,,,fp32,offline,,top1_accuracy,78.31,,,,,,,
+vit_mobilevit_reference_fp32_full50000__offline__top5_accuracy,vit_mobilevit_reference_fp32_full50000,vit,mobilevit,reference,reference,fp32_full50000,,,,none,,,fp32,offline,,top5_accuracy,94.156,,,,,,,
+vit_efficientvit_b1_reference_fp32__offline__top1_accuracy,vit_efficientvit_b1_reference_fp32,vit,efficientvit_b1,reference,reference,fp32,,,,none,,,fp32,offline,,top1_accuracy,81.2,,,,,,,
+vit_efficientvit_b1_reference_fp32__offline__top5_accuracy,vit_efficientvit_b1_reference_fp32,vit,efficientvit_b1,reference,reference,fp32,,,,none,,,fp32,offline,,top5_accuracy,93.3,,,,,,,
+vit_efficientvit_b1_reference_fp32_full50000__offline__top1_accuracy,vit_efficientvit_b1_reference_fp32_full50000,vit,efficientvit_b1,reference,reference,fp32_full50000,,,,none,,,fp32,offline,,top1_accuracy,79.26,,,,,,,
+vit_efficientvit_b1_reference_fp32_full50000__offline__top5_accuracy,vit_efficientvit_b1_reference_fp32_full50000,vit,efficientvit_b1,reference,reference,fp32_full50000,,,,none,,,fp32,offline,,top5_accuracy,94.3,,,,,,,

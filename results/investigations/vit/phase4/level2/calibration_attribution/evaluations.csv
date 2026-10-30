@@ -1,0 +1,10 @@
+model,repeat,calib_seed,variant,n_percentile,n_minmax,two_layers,top1,top5,recovery,onnx_sha256,seconds
+mobilevit,1,42,control,72,0,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,68.9,89.05,0.8632198952879583,1ccf0b84777ad9b8d1115294e22390f539b33a5ae02cb317dc925629599cec72,259.7
+mobilevit,2,43,control,72,0,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,68.5,88.85,0.8605398457583548,a739ef82b7dc19044d8601ac5f5c3a2321bc4fed058d7e3cee8083485aca109f,283.5
+mobilevit,3,44,control,72,0,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,67.75,87.8,0.8516624040920716,319eb25f5cb2903e076e068ef1e07f840c735cfb8937c0884eba1a732a376ee3,249.8
+mobilevit,1,42,sufficiency,2,70,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,64.1,86.05,0.800392670157068,aa6da698b0a097bc2f1f041bdd6b1f31e0fd288ad6015e940cca41d9cbbb9e23,229.6
+mobilevit,1,42,necessity,70,2,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,4.0,9.35,0.013743455497382198,b8b09399812e0051163a4fe6e7f5546bc3f5f97f24d1f89a5259da298ad3d124,237.8
+mobilevit,2,43,sufficiency,2,70,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,63.15,85.4,0.7917737789203085,ab97e6006fd00149018bd111fd3bfc14db66e9cd753b10c824f1fc8d74a46e95,224.1
+mobilevit,2,43,necessity,70,2,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,3.45,7.6,0.024421593830334192,4eee2cb2aebbc813ae40e5c8f8ebb866df2ac12b3c06507c4f7341278de1237b,253.2
+mobilevit,3,44,sufficiency,2,70,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,60.85,83.25,0.7634271099744246,947106f6d7b3c7b9e214be3c3088298a55660253c7cc9e8c0b5997d291f43cde,239.7
+mobilevit,3,44,necessity,70,2,stages.0.0.conv2_kxk.conv;stages.1.0.conv2_kxk.conv,3.85,8.15,0.03452685421994885,e58d5abfe359ddbbc88d6e274e77555622bfb3ee46e87e38217e3c2202d132a8,242.3

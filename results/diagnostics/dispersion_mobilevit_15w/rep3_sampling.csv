@@ -1,0 +1,5 @@
+result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+vit_mobilevit_deploy_fp32__jetson_cpu_15w__rep1,vit_mobilevit_deploy_fp32,jetson_cpu_15w,1,cpu,15,30.0,3772,141.01222087800033,141.01600389899977,26.749454597012726,0.041748372000256495,30,True,2026-10-02T10:52:10+00:00
+vit_mobilevit_deploy_per_channel_asymmetric_int8__jetson_cpu_15w__rep1,vit_mobilevit_deploy_per_channel_asymmetric_int8,jetson_cpu_15w,1,cpu,15,30.0,3476,130.5800640890002,130.58332667100058,26.619683672622823,0.0449540990002788,30,True,2026-10-02T10:54:21+00:00
+vit_mobilevit_deploy_per_tensor_asymmetric_int8__jetson_cpu_15w__rep1,vit_mobilevit_deploy_per_tensor_asymmetric_int8,jetson_cpu_15w,1,cpu,15,30.0,3432,129.25272260700058,129.25664313400011,26.552632167255535,0.04538803400009783,30,True,2026-10-02T10:56:30+00:00
+vit_mobilevit_deploy_per_channel_symmetric_int8__jetson_cpu_15w__rep1,vit_mobilevit_deploy_per_channel_symmetric_int8,jetson_cpu_15w,1,cpu,15,30.0,3419,128.4541324490001,128.457229052,26.616504543810134,0.0408450980003181,30,True,2026-10-02T10:58:39+00:00

@@ -1,0 +1,31 @@
+{
+ "model": "tinyllama_1_1b",
+ "label": "full_rep1",
+ "imatrix_rep": 1,
+ "n_include": 0,
+ "threads": 8,
+ "gguf_sha256": "257496070ff948bc57360e5d7974a575f6c9342a8cef4801f29dc750d2bda18e",
+ "quantize_seconds": 57.3,
+ "quantize_cmd": [
+  "llama.cpp/build/bin/llama-quantize",
+  "--imatrix",
+  "artifacts/llm_imatrix/llm_tinyllama_1_1b_phase3_combined_q3_k__rep1.dat",
+  "artifacts/llm_base/tinyllama_1_1b_f16.gguf",
+  "results/investigations/llm/phase4/intervention/tmp/tinyllama_1_1b__full_rep1.gguf",
+  "Q3_K_M",
+  "8"
+ ],
+ "ppl": 8.9554,
+ "chunks": 658,
+ "ppl_seconds": 1990.6,
+ "ppl_cmd": [
+  "llama.cpp/build/bin/llama-perplexity",
+  "-m",
+  "results/investigations/llm/phase4/intervention/tmp/tinyllama_1_1b__full_rep1.gguf",
+  "-f",
+  "artifacts/llm_eval/wikitext2_test.txt",
+  "-t",
+  "8"
+ ],
+ "finished": "2026-10-07T18:09:33"
+}

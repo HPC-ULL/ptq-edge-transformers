@@ -1,0 +1,11 @@
+model         bk  step    window s  t_rep s  E_net J  E/inf J  idle W  fixed %  cached % (before->drop)
+qwen2_5_1_5b  cpu cold1       46.6    1.239    287.3    9.576   2.034     20.2                     0->0
+qwen2_5_1_5b  cpu cold2       45.6    1.207    281.3    9.376   2.149     20.6                   100->0
+qwen2_5_1_5b  cpu cold3       45.2    1.194    279.5    9.317   2.150     20.7                   100->0
+qwen2_5_1_5b  gpu cold1       26.1    0.574    254.6    8.488   2.153     34.1                   100->0
+qwen2_5_1_5b  gpu cold2       26.1    0.573    250.6    8.352   2.192     34.1                   100->0
+qwen2_5_1_5b  gpu cold3       26.1    0.574    250.1    8.337   2.230     34.1                   100->0
+
+energy per inference over the invocations of each combination (sample std):
+qwen2_5_1_5b  cpu  E/inf mean 9.423 J, range 0.259 J (2.7 % of the mean), CV 1.4 %  (n=3)
+qwen2_5_1_5b  gpu  E/inf mean 8.392 J, range 0.151 J (1.8 % of the mean), CV 1.0 %  (n=3)

@@ -1,0 +1,4 @@
+run_id,model_name,repeat_id,calibration_algorithm,top1_outq,top5_outq,top1_prev,top5_prev,onnx
+vit_mobilevit_deploy_per_channel_asymmetric_int8,mobilevit,1,percentile,62.65,91.25,,,gate_deploy3/vit_mobilevit_deploy_per_channel_asymmetric_int8__rep1__outq_bnfold.onnx
+vit_mobilevit_deploy_per_channel_asymmetric_int8,mobilevit,2,percentile,63.75,91.2,,,gate_deploy3/vit_mobilevit_deploy_per_channel_asymmetric_int8__rep2__outq_bnfold.onnx
+vit_mobilevit_deploy_per_channel_asymmetric_int8,mobilevit,3,percentile,63.6,91.05,,,gate_deploy3/vit_mobilevit_deploy_per_channel_asymmetric_int8__rep3__outq_bnfold.onnx

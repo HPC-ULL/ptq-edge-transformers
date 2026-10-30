@@ -1,0 +1,12 @@
+{
+ "t0_c": 45.687,
+ "utc_offset_s": 3600,
+ "device_id": "jetson_cpu_50w_serie",
+ "flags": [
+  "--with-power",
+  "--temp-cooldown",
+  "--force",
+  "--temp-log"
+ ],
+ "started": "2026-10-02T12:27:55.911274+00:00"
+}

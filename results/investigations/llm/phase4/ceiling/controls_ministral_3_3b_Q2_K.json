@@ -1,0 +1,10 @@
+{
+ "model": "ministral_3_3b",
+ "format": "Q2_K",
+ "threads": 8,
+ "ppl": 12.9385,
+ "recorded": 12.9385,
+ "abs_diff": 0.0,
+ "chunks": 588,
+ "passed": true
+}

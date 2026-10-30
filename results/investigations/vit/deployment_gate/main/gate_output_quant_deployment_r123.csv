@@ -1,0 +1,13 @@
+run_id,model_name,repeat_id,calibration_algorithm,top1_outq,top5_outq,top1_prev,top5_prev,onnx
+vit_deit_tiny_deploy_asymmetric_int8,deit_tiny,1,mse,73.3,91.15,,,gate_deploy/vit_deit_tiny_deploy_asymmetric_int8__rep1__outq_bnfold.onnx
+vit_deit_tiny_deploy_asymmetric_int8,deit_tiny,2,mse,73.2,91.15,,,gate_deploy/vit_deit_tiny_deploy_asymmetric_int8__rep2__outq_bnfold.onnx
+vit_deit_tiny_deploy_asymmetric_int8,deit_tiny,3,mse,73.65,91.2,,,gate_deploy/vit_deit_tiny_deploy_asymmetric_int8__rep3__outq_bnfold.onnx
+vit_mobilevit_deploy_core_int8,mobilevit,1,percentile,49.0,73.5,,,gate_deploy/vit_mobilevit_deploy_core_int8__rep1__outq_bnfold.onnx
+vit_mobilevit_deploy_core_int8,mobilevit,2,percentile,48.35,76.6,,,gate_deploy/vit_mobilevit_deploy_core_int8__rep2__outq_bnfold.onnx
+vit_mobilevit_deploy_core_int8,mobilevit,3,percentile,45.1,74.7,,,gate_deploy/vit_mobilevit_deploy_core_int8__rep3__outq_bnfold.onnx
+vit_mobilevit_deploy_per_channel_int8,mobilevit,1,percentile,62.8,86.45,,,gate_deploy/vit_mobilevit_deploy_per_channel_int8__rep1__outq_bnfold.onnx
+vit_mobilevit_deploy_per_channel_int8,mobilevit,2,percentile,57.25,85.6,,,gate_deploy/vit_mobilevit_deploy_per_channel_int8__rep2__outq_bnfold.onnx
+vit_mobilevit_deploy_per_channel_int8,mobilevit,3,percentile,55.0,83.25,,,gate_deploy/vit_mobilevit_deploy_per_channel_int8__rep3__outq_bnfold.onnx
+vit_mobilevit_deploy_asymmetric_int8,mobilevit,1,percentile,50.95,80.6,,,gate_deploy/vit_mobilevit_deploy_asymmetric_int8__rep1__outq_bnfold.onnx
+vit_mobilevit_deploy_asymmetric_int8,mobilevit,2,percentile,52.6,80.95,,,gate_deploy/vit_mobilevit_deploy_asymmetric_int8__rep2__outq_bnfold.onnx
+vit_mobilevit_deploy_asymmetric_int8,mobilevit,3,percentile,52.85,80.35,,,gate_deploy/vit_mobilevit_deploy_asymmetric_int8__rep3__outq_bnfold.onnx

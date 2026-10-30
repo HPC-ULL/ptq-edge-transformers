@@ -1,0 +1,46 @@
+# Model artifacts (regenerable; see README, "Data not included")
+*.onnx
+*.gguf
+*.dat
+*.pt
+*.pth
+*.safetensors
+*.bin
+artifacts/
+edge_delivery/
+
+# Caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+huggingface/
+.huggingface/
+hf_cache/
+_hf_snapshots/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Logs and temporary files
+*.log
+*.out
+*.tmp
+*.bak
+tmp/
+tmp_*/
+
+# Secrets and local configuration
+.env
+.env.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# LaTeX build files
+*.aux
+*.synctex.gz

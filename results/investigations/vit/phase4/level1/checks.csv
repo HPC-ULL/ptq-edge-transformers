@@ -1,0 +1,4 @@
+model,status,problems,degenerate
+deit_tiny,OK,,
+mobilevit,OK,,
+efficientvit_b1,OK,,

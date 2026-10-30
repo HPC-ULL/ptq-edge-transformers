@@ -1,0 +1,44 @@
+model          bk  step      N  window s  elapsed  t_rep s   E_net J  fixed %  idle W cached %
+tinyllama_1_1b cpu cold *   30      29.7     29.7    0.777     184.1     21.6   2.034   100->0
+tinyllama_1_1b cpu warmup *  10       9.8      9.8    0.831      60.0     15.1   2.353      100
+tinyllama_1_1b cpu n10      10       9.6      9.6    0.818      59.4     15.2   2.353      100
+tinyllama_1_1b cpu n30      30      25.3     25.3    0.792     175.6      6.2   2.353      100
+tinyllama_1_1b cpu n90      90      72.3     72.3    0.784     524.4      2.4   2.314      100
+qwen2_5_1_5b   cpu cold *   30      45.4     45.4    1.201     280.4     20.7   2.150     0->0
+qwen2_5_1_5b   cpu warmup *  10      15.0     15.0    1.248      95.2     16.9   2.234      100
+qwen2_5_1_5b   cpu n10      10      15.1     15.1    1.266      94.5     16.4   2.313      100
+qwen2_5_1_5b   cpu n30      30      39.7     39.7    1.235     277.2      6.6   2.274      100
+qwen2_5_1_5b   cpu n90      90     111.4    111.4    1.209     822.1      2.4   2.274      100
+ministral_3_3b cpu cold *   30      83.5     83.5    2.314     567.9     16.9   2.150     0->0
+ministral_3_3b cpu warmup *  10      27.5     27.5    2.364     189.5     14.2   2.353      100
+ministral_3_3b cpu n10      10      26.9     26.9    2.331     190.8     13.2   2.273      100
+ministral_3_3b cpu n30      30      73.2     73.2    2.326     559.0      4.8   2.273      100
+ministral_3_3b cpu n90      90     211.2    211.2    2.305    1654.3      1.8   2.274      100
+tinyllama_1_1b gpu cold *   30      16.8     16.8    0.363     169.4     35.3   2.113     0->0
+tinyllama_1_1b gpu warmup *  10       4.7      4.7    0.369      51.0     21.4   2.506      100
+tinyllama_1_1b gpu n10      10       4.7      4.7    0.369      50.4     21.3   2.663      100
+tinyllama_1_1b gpu n30      30      11.9     11.9    0.363     155.3      8.1   2.669      100
+tinyllama_1_1b gpu n90      90      33.4     33.4    0.361     482.5      2.7   2.632      100
+qwen2_5_1_5b   gpu cold *   30      26.1     26.1    0.573     251.5     34.0   2.308     0->0
+qwen2_5_1_5b   gpu warmup *  10       7.6      7.6    0.577      81.0     24.6   2.588      100
+qwen2_5_1_5b   gpu n10      10       7.6      7.6    0.577      80.9     23.8   2.509      100
+qwen2_5_1_5b   gpu n30      30      19.1     19.1    0.573     242.4      9.8   2.512      100
+qwen2_5_1_5b   gpu n90      90      53.3     53.3    0.572     734.5      3.4   2.513      100
+ministral_3_3b gpu cold *   30      44.5     44.5    1.047     526.9     29.4   2.232     0->0
+ministral_3_3b gpu warmup *  10      13.1     13.1    1.054     173.1     19.5   2.431      100
+ministral_3_3b gpu n10      10      13.0     13.0    1.052     172.2     19.0   2.471      100
+ministral_3_3b gpu n30      30      33.9     33.9    1.047     508.3      7.2   2.593      100
+ministral_3_3b gpu n90      90      96.9     96.9    1.049    1508.6      2.6   2.513      100
+(* = not part of the N sweep: warm-up discarded; cold = page cache dropped first)
+
+model          bk       M ls   M diff   E_corr   dev ls dev diff  sign   C/E30  t-frac  ratio   cold: E_corr dev  fixed % (warm->cold)
+tinyllama_1_1b cpu     5.812    5.812    5.488   -5.58%   -5.57%     -    0.7%    6.2%   0.11   4.809 -17.3 %   6.2 -> 21.6
+qwen2_5_1_5b   cpu     9.091    9.094    8.633   -5.04%   -5.07%     -    1.6%    6.6%   0.24   7.414 -18.5 %   6.6 -> 20.7
+ministral_3_3b cpu    18.286   18.294   17.746   -2.95%   -3.00%     -    1.9%    4.8%   0.39   15.739 -13.9 %   4.8 -> 16.9
+tinyllama_1_1b gpu     5.413    5.401    4.760  -12.06%  -11.86%     -   -4.6%    8.1%  -0.57   3.656 -32.4 %   8.1 -> 35.3
+qwen2_5_1_5b   gpu     8.177    8.170    7.292  -10.82%  -10.74%     -   -1.2%    9.8%  -0.12   5.531 -32.4 %   9.8 -> 34.0
+ministral_3_3b gpu    16.697   16.704   15.715   -5.88%   -5.92%     -    1.5%    7.2%   0.20   12.406 -25.7 %   7.2 -> 29.4
+(M in J per repetition; dev = (E_corr - M)/M, vs the least-squares M that decides the criterion; ratio = (C/E_net(30)) / fixed-time fraction, with C = E_net(30) - 30*M)
+
+CRITERION: NO VALIDADA (dentro del ruido: repetir N=30)
+  median |E_corr - M|/M = 5.73 % (limit 3), max 12.06 % (limit 6); E_corr > M in 0 of 6

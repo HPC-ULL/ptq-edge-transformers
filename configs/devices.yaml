@@ -1,0 +1,26 @@
+# Open catalog of edge devices -- see technical_architecture.md
+# Section 10.5 for the full schema and the reasoning (it validates the `device`
+# column of the results; the only reserved exception: device == "offline",
+# which needs no entry here -- offline accuracy/perplexity rows).
+#
+# Optional field min_uptime_s (seconds; if missing, 0 = no wait): minimum wait
+# since boot before measuring, see scripts/run_batch.py. The Jetson AGX Orin
+# entries carry 600.
+#
+# No real edge hardware entries yet (pending physical access to the study's
+# devices). The only current entry is a development/test one -- see the
+# comment in the entry itself. The device-catalog template is
+# configs/devices.example.yaml.
+
+- device_id: cluster_dev_test
+  display_name: "[DEV/TEST] Cluster CPU node (<cluster-node>) -- NOT a study device"
+  architecture: x86_64
+  backend: cpu
+  power_mode_w: null
+  ram_gb: null  # TODO: confirm with `free -g` on the node -- does not block --self-test
+  cpu_cores: 1  # TODO: confirm with `nproc --all` (logical) and `lscpu` (physical) --
+                    # use ONLY the physical core count for -x (Section 6: never
+                    # hyperthreads, never "auto-select"). Do NOT use the -j40 of the
+                    # ONNX Runtime build as a substitute, they are different concepts.
+  power_measurement: null  # no energy is measured on this device -- it is not real edge hardware
+  added_by: nicolas

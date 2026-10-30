@@ -1,0 +1,13 @@
+model,format,repeat,ppl_none,ppl_imatrix,ppl_f16,G,source
+tinyllama_1_1b,Q2_K,1,12.3096,10.6143,8.5113,0.44633125345549324,llm_tinyllama_1_1b_phase3_baseline_q2_k / _combined_q2_k (CSV); F16 llm_perplexity_f16_reference.csv
+tinyllama_1_1b,Q2_K,2,12.3096,10.6087,8.5113,0.4478055972408707,llm_tinyllama_1_1b_phase3_baseline_q2_k / _combined_q2_k (CSV); F16 llm_perplexity_f16_reference.csv
+tinyllama_1_1b,Q2_K,3,12.3096,10.6132,8.5113,0.44662085669904933,llm_tinyllama_1_1b_phase3_baseline_q2_k / _combined_q2_k (CSV); F16 llm_perplexity_f16_reference.csv
+tinyllama_1_1b,Q3_K_M,1,9.2084,8.9554,8.5113,0.3629321474680828,llm_tinyllama_1_1b_phase3_baseline_q3_k / _combined_q3_k (CSV); F16 llm_perplexity_f16_reference.csv
+tinyllama_1_1b,Q3_K_M,2,9.2084,8.9613,8.5113,0.35446851240854976,llm_tinyllama_1_1b_phase3_baseline_q3_k / _combined_q3_k (CSV); F16 llm_perplexity_f16_reference.csv
+tinyllama_1_1b,Q3_K_M,3,9.2084,8.9585,8.5113,0.35848515277578374,llm_tinyllama_1_1b_phase3_baseline_q3_k / _combined_q3_k (CSV); F16 llm_perplexity_f16_reference.csv
+qwen2_5_1_5b,Q2_K,1,26.1245,14.1795,10.1692,0.7486540522584971,llm_qwen2_5_1_5b_phase3_baseline_q2_k / _combined_q2_k (CSV); F16 llm_perplexity_f16_reference.csv
+qwen2_5_1_5b,Q2_K,2,26.1245,14.1648,10.1692,0.7495753762072791,llm_qwen2_5_1_5b_phase3_baseline_q2_k / _combined_q2_k (CSV); F16 llm_perplexity_f16_reference.csv
+qwen2_5_1_5b,Q2_K,3,26.1245,14.1571,10.1692,0.7500579744661648,llm_qwen2_5_1_5b_phase3_baseline_q2_k / _combined_q2_k (CSV); F16 llm_perplexity_f16_reference.csv
+qwen2_5_1_5b,Q3_K_M,1,12.4471,11.4282,10.1692,0.44729794986610477,llm_qwen2_5_1_5b_phase3_baseline_q3_k / _combined_q3_k (CSV); F16 llm_perplexity_f16_reference.csv
+qwen2_5_1_5b,Q3_K_M,2,12.4471,11.4393,10.1692,0.4424250406075776,llm_qwen2_5_1_5b_phase3_baseline_q3_k / _combined_q3_k (CSV); F16 llm_perplexity_f16_reference.csv
+qwen2_5_1_5b,Q3_K_M,3,12.4471,11.4043,10.1692,0.4577900698011331,llm_qwen2_5_1_5b_phase3_baseline_q3_k / _combined_q3_k (CSV); F16 llm_perplexity_f16_reference.csv

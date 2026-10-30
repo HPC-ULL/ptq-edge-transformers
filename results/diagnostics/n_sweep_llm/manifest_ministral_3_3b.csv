@@ -1,0 +1,2 @@
+run_id,repeat_id,artifact_path
+llm_ministral_3_3b_phase1_baseline_default_q4km,,artifacts/llm/llm_ministral_3_3b_phase1_baseline_default_q4km.gguf

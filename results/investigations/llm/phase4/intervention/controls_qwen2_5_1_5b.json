@@ -1,0 +1,28 @@
+{
+ "model": "qwen2_5_1_5b",
+ "threads": 8,
+ "control1_none": {
+  "ppl": 12.4471,
+  "ok": true
+ },
+ "control1_full_rep1": {
+  "ppl": 11.4282,
+  "ok": true
+ },
+ "control4": {
+  "ppl_first": 11.4282,
+  "ppl_second": 11.4282,
+  "abs_diff": 0.0,
+  "ok": true,
+  "seconds": 2649.3
+ },
+ "control2": {
+  "n_explicit": 196,
+  "sha256_full": "444af092d4ebfaa6be7f565b33a19deb0a05ace2429d0073f54408a08495a796",
+  "sha256_explicit": "444af092d4ebfaa6be7f565b33a19deb0a05ace2429d0073f54408a08495a796",
+  "tensor_problems": [],
+  "ok": true,
+  "quantize_seconds": 78.6
+ },
+ "passed": true
+}

@@ -1,0 +1,3 @@
+invocation,result_id,run_id,device_id,repeat_id,backend,power_mode_w,configured_hz,n_samples,window_s,elapsed_s,effective_hz,dt_max_s,min_samples_threshold,meets_threshold,measured_at
+control,vit_mobilevit_deploy_fp32__jetson_cpu_50w_serie__rep1,vit_mobilevit_deploy_fp32,jetson_cpu_50w_serie,1,cpu,50,30.0,2070,76.10281285599922,76.10584813400055,27.200045863177593,0.04035061499962467,30,True,2026-10-02T15:06:22+00:00
+control,vit_mobilevit_deploy_per_channel_asymmetric_int8__jetson_cpu_50w_serie__rep1,vit_mobilevit_deploy_per_channel_asymmetric_int8,jetson_cpu_50w_serie,1,cpu,50,30.0,2315,85.14308632300163,85.14575232500101,27.18952412903779,0.040186353000535746,30,True,2026-10-02T15:07:48+00:00

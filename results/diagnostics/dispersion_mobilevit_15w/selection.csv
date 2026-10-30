@@ -1,0 +1,5 @@
+device_id,run_id,chosen_rep,median_power_rep,chosen_is_median_power
+jetson_cpu_15w,vit_mobilevit_deploy_fp32,2,2,True
+jetson_cpu_15w,vit_mobilevit_deploy_per_channel_asymmetric_int8,3,3,True
+jetson_cpu_15w,vit_mobilevit_deploy_per_tensor_asymmetric_int8,1,1,True
+jetson_cpu_15w,vit_mobilevit_deploy_per_channel_symmetric_int8,2,2,True

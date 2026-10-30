@@ -1,0 +1,420 @@
+{
+  "device_id": "jetson_gpu_50w",
+  "uptime_s": 1647.72,
+  "rounds": 5,
+  "repeats": 1000,
+  "profile_repeats": 20,
+  "artifacts": {
+    "fp32": "probe_int8_kernels/vit_mobilevit_fp32.onnx",
+    "int8": "artifacts/vit/vit_mobilevit_phase1_baseline_default_int8__rep1.onnx"
+  },
+  "latency": {
+    "fp32": {
+      "samples_ms": [
+        6.90695,
+        6.75575,
+        6.81355,
+        6.86584,
+        6.8219
+      ],
+      "median_ms": 6.8219,
+      "min_ms": 6.75575,
+      "stdev_ms": 0.05704370929383897,
+      "ratio_vs_reference": 1.0
+    },
+    "int8": {
+      "samples_ms": [
+        10.7817,
+        10.7499,
+        10.7929,
+        10.7301,
+        10.7558
+      ],
+      "median_ms": 10.7558,
+      "min_ms": 10.7301,
+      "stdev_ms": 0.025225621895207908,
+      "ratio_vs_reference": 1.5766575294272858
+    }
+  },
+  "profile": {
+    "fp32": {
+      "profile_file": null,
+      "per_op": {
+        "Conv": {
+          "unique_nodes": 35,
+          "calls": 735,
+          "dur_us": 435080.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "QuickGelu": {
+          "unique_nodes": 34,
+          "calls": 714,
+          "dur_us": 25022.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Add": {
+          "unique_nodes": 17,
+          "calls": 357,
+          "dur_us": 68257.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Reshape": {
+          "unique_nodes": 90,
+          "calls": 1890,
+          "dur_us": 33812.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Transpose": {
+          "unique_nodes": 48,
+          "calls": 1008,
+          "dur_us": 32730.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "LayerNormalization": {
+          "unique_nodes": 18,
+          "calls": 378,
+          "dur_us": 14090.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Gemm": {
+          "unique_nodes": 37,
+          "calls": 777,
+          "dur_us": 62873.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Split": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 9149.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Squeeze": {
+          "unique_nodes": 27,
+          "calls": 567,
+          "dur_us": 9144.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "FusedMatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 12943.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Softmax": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 10366.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "MatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 8896.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "SkipLayerNormalization": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 5023.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Concat": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 3605.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "GlobalAveragePool": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 14623.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Flatten": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 379.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        }
+      },
+      "rollup": {
+        "integer": {
+          "nodes": 0,
+          "dur_us": 0.0,
+          "time_share": 0.0
+        },
+        "qdq": {
+          "nodes": 0,
+          "dur_us": 0.0,
+          "time_share": 0.0
+        },
+        "float_compute": {
+          "nodes": 90,
+          "dur_us": 519792.0,
+          "time_share": 0.6967795901296528
+        },
+        "other": {
+          "nodes": 260,
+          "dur_us": 226200.0,
+          "time_share": 0.30322040987034715
+        }
+      },
+      "provider_time_share": {
+        "CUDAExecutionProvider": 1.0
+      },
+      "verdict": "FLOAT",
+      "reading": "plain float graph: no integer kernels and no Quantize/Dequantize nodes"
+    },
+    "int8": {
+      "profile_file": null,
+      "per_op": {
+        "DequantizeLinear": {
+          "unique_nodes": 213,
+          "calls": 4473,
+          "dur_us": 124104.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "qdq"
+        },
+        "QuantizeLinear": {
+          "unique_nodes": 141,
+          "calls": 2961,
+          "dur_us": 87290.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "qdq"
+        },
+        "Conv": {
+          "unique_nodes": 35,
+          "calls": 735,
+          "dur_us": 397947.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "BatchNormalization": {
+          "unique_nodes": 32,
+          "calls": 672,
+          "dur_us": 42372.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "QuickGelu": {
+          "unique_nodes": 34,
+          "calls": 714,
+          "dur_us": 24174.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Add": {
+          "unique_nodes": 17,
+          "calls": 357,
+          "dur_us": 68450.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Reshape": {
+          "unique_nodes": 99,
+          "calls": 2079,
+          "dur_us": 37073.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Transpose": {
+          "unique_nodes": 48,
+          "calls": 1008,
+          "dur_us": 32259.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "LayerNormalization": {
+          "unique_nodes": 18,
+          "calls": 378,
+          "dur_us": 14169.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Gemm": {
+          "unique_nodes": 37,
+          "calls": 777,
+          "dur_us": 62674.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Split": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 9320.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Squeeze": {
+          "unique_nodes": 27,
+          "calls": 567,
+          "dur_us": 9457.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "FusedMatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 13908.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "Softmax": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 11122.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "MatMul": {
+          "unique_nodes": 9,
+          "calls": 189,
+          "dur_us": 9164.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "float_compute"
+        },
+        "SkipLayerNormalization": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 5045.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Concat": {
+          "unique_nodes": 3,
+          "calls": 63,
+          "dur_us": 3787.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "GlobalAveragePool": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 13659.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        },
+        "Flatten": {
+          "unique_nodes": 1,
+          "calls": 21,
+          "dur_us": 373.0,
+          "providers": [
+            "CUDAExecutionProvider"
+          ],
+          "category": "other"
+        }
+      },
+      "rollup": {
+        "integer": {
+          "nodes": 0,
+          "dur_us": 0.0,
+          "time_share": 0.0
+        },
+        "qdq": {
+          "nodes": 354,
+          "dur_us": 211394.0,
+          "time_share": 0.21875578855214534
+        },
+        "float_compute": {
+          "nodes": 90,
+          "dur_us": 483693.0,
+          "time_share": 0.5005375915690741
+        },
+        "other": {
+          "nodes": 301,
+          "dur_us": 271260.0,
+          "time_share": 0.2807066198787806
+        }
+      },
+      "provider_time_share": {
+        "CUDAExecutionProvider": 1.0000000000000002
+      },
+      "verdict": "FALLBACK",
+      "reading": "no integer kernels; 354 explicit Quantize/Dequantize node(s) around float compute -> dequantize -> float -> quantize, no real INT8 acceleration"
+    }
+  }
+}

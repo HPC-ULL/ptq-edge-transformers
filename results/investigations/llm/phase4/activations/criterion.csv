@@ -1,0 +1,5 @@
+type,median_tinyllama_1_1b,median_qwen2_5_1_5b,median_ministral_3_3b,ministral_lower_than_both,ci_overlap_tinyllama_1_1b,ci_overlap_qwen2_5_1_5b,n_types_lower,verdict
+qkv,16.44670638652462,20.700995471610227,16.762918813262182,False,True,True,0,not explained by this metric
+attn_output,6.278778033986569,8.904872247025677,7.5270171440897755,False,True,True,0,not explained by this metric
+gate_up,5.439700293859591,16.382160917945647,10.894968521433412,False,False,False,0,not explained by this metric
+down,9.871120380605284,11.835817491700933,12.492505598353599,False,True,True,0,not explained by this metric

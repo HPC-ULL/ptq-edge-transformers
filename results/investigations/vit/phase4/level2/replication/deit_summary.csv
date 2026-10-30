@@ -1,0 +1,3 @@
+model,K,repeat,calib_seed,k0_top1,targeted_r_top1,targeted_r_recovery,random_s1_top1,random_s1_recovery,random_s2_top1,random_s2_recovery,random_s3_top1,random_s3_recovery,targeted_err_top1,targeted_err_recovery,random_max_top1,targeted_r_beats_max,targeted_err_beats_max,verdict
+deit_tiny,8,2,43,58.45,61.25,0.18604651162790684,60.7,0.14950166112956814,60.45,0.13289036544850502,63.1,0.30897009966777406,64.35,0.3920265780730892,63.1,False,True,negative result replicates
+deit_tiny,8,3,44,56.15,61.45,0.30547550432276677,60.75,0.2651296829971182,59.3,0.18155619596541778,63.15,0.4034582132564841,64.9,0.5043227665706056,63.15,False,True,negative result replicates
